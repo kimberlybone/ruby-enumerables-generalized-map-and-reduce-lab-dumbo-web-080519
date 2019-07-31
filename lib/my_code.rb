@@ -9,7 +9,7 @@ def map(source_array)
 end 
 
 
-def reduce(source_array, starting_point = 0)
+def reduce(source_array, starting_point = nil)
   i = nil
     while i < source_array.length
       starting_point = yield(starting_point, source_array[i])

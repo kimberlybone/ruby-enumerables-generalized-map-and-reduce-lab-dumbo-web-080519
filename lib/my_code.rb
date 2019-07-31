@@ -15,6 +15,7 @@ def reduce(source_array, starting_point = 0)
       starting_point = yield(starting_point, source_array[i])
       i += 1
     end
+    starting_point
 end 
 #   if starting_point == nil 
 #     source_array.each do |num|

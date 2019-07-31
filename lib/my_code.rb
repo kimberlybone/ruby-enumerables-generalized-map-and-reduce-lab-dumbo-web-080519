@@ -11,15 +11,10 @@ end
 
 def reduce(source_array, starting_point = 0)
   i = 0
-  total = starting_point
     while i < source_array.length
-      total = yield(starting_point, source_array[i])
+      starting_point = yield(starting_point, source_array[i])
       i += 1
     end
-  else 
-    total = yield(source_array[0])
-  end 
-  starting_point
 end 
 #   if starting_point == nil 
 #     source_array.each do |num|
